@@ -1,0 +1,37 @@
+main h2 {
+    color: #0fb8ad;
+    border-bottom: 1px solid black;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.new-tweet {
+    border-radius: 10px;
+    border: 1px solid lightgrey;
+    margin: 0 auto;
+    background-color: #eee;
+    margin: 2em;
+}
+
+.new-tweet textarea {
+    width: 100%;
+    padding: 5px;
+}
+
+.new-tweet form {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+
+.new-tweet form button {
+    float: left;
+}
+
+.new-tweet form span {
+    float: right;
+    font-size: 80%;
+    padding: 5px;
+    font-style: italic;
+}

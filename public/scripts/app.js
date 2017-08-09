@@ -1,9 +1,3 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
 var data = [
   {
     "user": {
@@ -18,7 +12,7 @@ var data = [
     "content": {
       "text": "If I have seen further it is by standing on the shoulders of giants"
     },
-    "created_at": 1461116232227
+    "created_at": 808740610000
   },
   {
     "user": {
@@ -32,7 +26,22 @@ var data = [
     "content": {
       "text": "Je pense , donc je suis"
     },
-    "created_at": 1461113959088
+    "created_at": 1325412610000
+  },
+  {
+    "user": {
+      "name": "Johann von Goethe",
+      "avatars": {
+        "small":   "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_50.png",
+        "regular": "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1.png",
+        "large":   "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_200.png"
+      },
+      "handle": "@johann49"
+    },
+    "content": {
+      "text": "Es ist nichts schrecklicher als eine tätige Unwissenheit."
+    },
+    "created_at": 1456866842000
   },
   {
     "user": {
@@ -59,30 +68,33 @@ function renderTweets(tweets) {
 }
 
 function createTweetElement(data) {
-    let $tweet = $('<article>')
-        .append($('<header>')
-            .append($('<img>').attr('src', data.user.avatars.regular))
-            .append($('<h3>').text(data.user.name))
-            .append($('<h5>').text(data.user.handle))
-        )
-        .append($('<div>')
-            .append($('<p>').text(data.content.text))
-        )
-        .append($('<footer>')
-            .append($('<p>').text(data.created_at))
-            .append($('<span>')
-                .append($('<i>').attr('class', 'material-icons').html('flag'))
-                .append($('<i>').attr('class', 'material-icons').html('loop'))
-                .append($('<i>').attr('class', 'material-icons').html('favorite'))
-            )
-        )
-    return $tweet;
+  let date = convertDate(data.created_at);
+  let $tweet = $('<article>')
+      .append($('<header>')
+          .append($('<img>').attr('src', data.user.avatars.regular))
+          .append($('<h3>').text(data.user.name))
+          .append($('<h5>').text(data.user.handle))
+      )
+      .append($('<div>')
+          .append($('<p>').text(data.content.text))
+      )
+      .append($('<footer>')
+          .append($('<p>').text(date))
+          .append($('<span>')
+              .append($('<i>').attr('class', 'material-icons').text('flag'))
+              .append($('<i>').attr('class', 'material-icons').text('loop'))
+              .append($('<i>').attr('class', 'material-icons').text('favorite'))
+          )
+      )
+  return $tweet;
+}
+
+function convertDate(unix) {
+  let date = unix / 1000;
+  let dateString = moment.unix(date).format("MM/DD/YYYY");
+  return dateString;
 }
 
 $(document).ready(function () {
     renderTweets(data);
 });
-
-
- 
-

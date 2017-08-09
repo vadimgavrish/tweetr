@@ -20,6 +20,10 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
+
+    <!-- Character Counter JS -->
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    
   </head>
 
   <body>
@@ -32,9 +36,6 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-  
-      </br>
-
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form action='/tweets' method='POST'>
@@ -43,37 +44,20 @@
           <span class="counter">140</span>
         </form>
       </section>
-
-      </br>
-      </br>
-      </br>
-      </br>
-      </br>
-      </br>
-      </br>
-      </br>
-      </br>
-      </br>
-      </br>
-      </br>
-      </br>
-      </br>
-      </br>
-      </br>
-      </br>
-      </br>
-      </br>
-      </br>
-      </br>
-      </br>
-      </br>
-      </br>
-      </br>
-      </br>
-      </br>
-      </br>
-      </br>
-
+      <section id="tweets" class="clearfix">
+        <article>
+          <header>
+            <img src="/images/dp.jpg">
+            <h2>DJ Khaled</h2>
+            <h5>@WeTheBest</h5>
+          </header>
+          <p>Every chance I get, I water the plants, Lion! The other day the grass was brown, now it’s green because I ain’t give up. Major key alert.</p>
+          <footer>
+            <p>date</p>
+            <span><i>icon</i><i>icon</i><i>icon</i></span>
+          </footer>
+        </article>
+      </section>
     </main>
   </body>
 </html>

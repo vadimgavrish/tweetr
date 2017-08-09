@@ -21,103 +21,19 @@ body {
   background-color: #eee;
 }
 
-/* change location of this!! */
-.clearfix:after {
-  visibility: hidden;
-  display: block;
-  font-size: 0;
-  content: " ";
-  clear: both;
-  height: 0;
-}
-* html .clearfix             { zoom: 1; } /* IE6 */
-*:first-child+html .clearfix { zoom: 1; } /* IE7 */
-
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
  .container {
    background: white;
-   width: 450px;
+   width: 550px;
    margin: 0 auto;
-   padding-top: 140px;
-   height: 100vh;
+   padding-top: 100px;
+   min-height: 100vh;
+   padding-bottom: 5px;
   }
 
   .makeRed {
     color: red;
-  }
-
-  #tweets {
-    background-color: skyblue;
-    max-width: 90%;
-    margin: 0 auto;
-    border-radius: 10px;
-    height: 225px; 
-  }
-
-  #tweets header {
-    background-color:lightgrey;
-    height: 85px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-  }
-
-  #tweets header img {
-    width: 60px;
-    height: 60px;
-    border-radius: 10px;
-    float: left;
-    position: relative;
-    left: 12px;
-    top: 10px;
-  }
-
-  #tweets header h2 {
-    font-size: 175%;
-    position: relative;
-    left: 25px;
-    top: 10px;
-    border: 0;
-  }
-
-  #tweets header h5 {
-    font-size: 95%;
-    float: right;
-    position: relative;
-    bottom: 55px;
-    right: 15px;
-    height: 25px;
-  }
-
-  #tweets p {
-    margin: 15px;
-    float: left;
-    position: relative;
-    bottom: 35px;
-  }
-
-  #tweets footer {
-    margin: 15px;
-    height: 40px;
-    width: 405px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    background-color: lightgrey;;
-    position: relative;
-    top: 85px;
-    right: 15px;
-  }
-
-  #tweets footer p {
-    position: relative;
-    bottom: 125px;
-  }
-
-  #tweets footer span {
-    float: right;
-    position: relative;
-    bottom: 110px;
-    right: 15px;
   }

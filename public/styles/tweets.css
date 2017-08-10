@@ -21,6 +21,10 @@ article {
     font-size: 110%;
   }
 
+  article div p {
+     word-break: break-all;
+  }
+
   article header {
     background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
     color: white;

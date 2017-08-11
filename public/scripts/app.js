@@ -39,12 +39,13 @@ function convertDate(unix) {
 
 $(document).ready(function () {
   
-  // slide up/down new-tweet section
+  // slide up/down new-tweet section, focus textarea, clear error messages
   $(".composeButton").click(function(){
-    $(".new-tweet").slideToggle(600);
+    $(".new-tweet").slideToggle();
     $(".new-tweet form textarea").focus();
+    $("form p").text("");
   })
-  
+
   // load exisitng tweets on page load
   loadTweets();
   
@@ -56,24 +57,23 @@ $(document).ready(function () {
     // input validation
     let input = $form.find('textarea').val().length
     if (input > 140) {
-      $("form p").text("Please enter a tweet with less than 140 characters!");
+      $("form p").text("Too many characters!");
       return;
     } else if (input == "" || null) {
        $("form p").text("Please enter a tweet!");
        return;
     }
-    
-    // add new tweet to database
+
+    // add new tweet to database, clear textarea & errors, reset counter,
     $.ajax({
       url: "/tweets",
       method: "POST",
       data: $form.serialize()
     }).done(function() {
-      // clear form after successful submission
       $form.find("input[type=text], textarea").val("");
+      $("form p").val("");
+      $('.counter').text(140);
       loadTweets();
-      // clear any erorr messages
-      $("form p").text("");
     });
   });
   

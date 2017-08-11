@@ -37,13 +37,3 @@ body {
   .makeRed {
     color: red;
   }
-
-  .errorMessage {
-    color: red;
-    margin-left: 5px;
-    margin-top:5px;
-    
-    position: absolute;
-    top: 243px;
-    margin-left: 60px;
-  }

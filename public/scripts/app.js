@@ -2,8 +2,8 @@
 function renderTweets(tweets) {
   $('#tweets-container').html('');
   tweets.forEach(function(key) {
-      let $tweet = createTweetElement(key);
-      $('#tweets-container').prepend($tweet);
+    let $tweet = createTweetElement(key);
+    $('#tweets-container').prepend($tweet);
   });  
 }
 
@@ -71,9 +71,9 @@ $(document).ready(function () {
       data: $form.serialize()
     }).done(function() {
       $form.find("input[type=text], textarea").val("");
-      $("form p").val("");
-      $('.counter').text(140);
       loadTweets();
+      $('.counter').text(140);
+      $("form p").text("");
     });
   });
   

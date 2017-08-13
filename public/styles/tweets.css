@@ -79,8 +79,8 @@ article {
     display: block;
     font-size: 0;
     content: " ";
-    clear: both;
     height: 0;
+    clear: both;
   }
 
   article footer p {

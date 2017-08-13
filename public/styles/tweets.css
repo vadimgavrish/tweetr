@@ -6,6 +6,7 @@ article {
     border-radius: 10px;
     transition: all 0.3s;
     margin-bottom: 25px;
+    box-shadow: 1px 1px 5px grey;
   }
   
   article:hover {

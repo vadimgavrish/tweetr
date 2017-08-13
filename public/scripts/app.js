@@ -64,16 +64,16 @@ $(document).ready(function () {
        return;
     }
 
-    // add new tweet to database, clear textarea & errors, reset counter,
+    // add new tweet to database, clear textarea & errors, reset counter
     $.ajax({
       url: "/tweets",
       method: "POST",
       data: $form.serialize()
     }).done(function() {
-      $form.find("input[type=text], textarea").val("");
       loadTweets();
-      $('.counter').text(140);
+      $form.find("input[type=text], textarea").val("");
       $("form p").text("");
+      $('.counter').text(140);
     });
   });
   

@@ -3,7 +3,6 @@ article {
     background-color: white;
     width: 490px;
     margin: 0 auto;
-    border: 1px solid grey;
     border-radius: 10px;
     transition: all 0.3s;
     margin-bottom: 25px;
@@ -26,7 +25,7 @@ article {
   }
 
   article header {
-    background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+    background: linear-gradient(141deg, #00FF00 0%, #1fc8db 51%, #2cb5e8 75%);
     color: white;
     height: 90px;
     border-top-left-radius: 10px;
@@ -46,7 +45,7 @@ article {
     float: left;
     width: 70px;
     height: 70px;
-    border-radius: 10px;
+    border-radius: 50px;
     margin-top: 8px;
     margin-left: 10px;
   }
@@ -103,6 +102,7 @@ article {
 
   article:hover i {
     opacity: 1;
+    cursor: default;
   }
 
   article i:hover {

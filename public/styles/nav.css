@@ -1,10 +1,12 @@
+
 nav {
   z-index: 9999;
+  
 }
 
 
 #nav-bar {
-  background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+  background: linear-gradient(141deg, #00FF00 0%, #1fc8db 51%, #2cb5e8 75%);
   height: 80px;
   position:fixed;
   top: 0;
@@ -14,15 +16,15 @@ nav {
 }
 
 #nav-bar .logo {
-  width: 80px;
-  height: 80px;
+  margin-top: 5px;
+  height: 70px;
  }
 
  #nav-bar .header {
   font-size: 200%;
   color: white;
   position: relative;
-  bottom: 30px;
+  bottom: 20px;
   left: 10px
  }
 
@@ -62,10 +64,10 @@ nav {
  }
 
  .composeButton:hover {
-  
-  background-color: dodgerblue;
+  background-color: #00FF00;
   transform: scale(1.1);
- 
+  color: deepskyblue;
+  border: 2px solid deepskyblue;
 }
 
 .composeButton:focus {

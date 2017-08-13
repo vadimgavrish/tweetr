@@ -6,6 +6,9 @@
 html {
   box-sizing: border-box;
   font-family: 'Roboto Condensed', sans-serif;
+  background-image: url("https://s-media-cache-ak0.pinimg.com/originals/f1/4e/9c/f14e9cc84854358f08917ad8a5568765.jpg");
+  background-size: cover;
+  background-attachment: fixed;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -18,7 +21,7 @@ html {
 body {
   margin: 0;
   color: #244751;
-  background-color: #eee;
+
 }
 
 /*
@@ -26,7 +29,6 @@ body {
  */
 
  .container {
-   background: white;
    width: 550px;
    margin: 0 auto;
    padding-top: 100px;

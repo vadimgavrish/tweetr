@@ -1,8 +1,7 @@
 "use strict";
 
 // Basic express setup:
-const PORT          = 8080
-;
+const PORT          = 8080;
 const express       = require("express");
 const bodyParser    = require("body-parser");
 const app           = express();
@@ -18,7 +17,6 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
     throw err;
   }
   
-  // real ones
   const DataHelpers = require("./lib/data-helpers.js")(db);
   const tweetsRoutes = require("./routes/tweets")(DataHelpers);
   app.use("/tweets", tweetsRoutes);

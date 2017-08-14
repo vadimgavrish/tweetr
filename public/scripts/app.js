@@ -64,7 +64,7 @@ $(document).ready(function () {
        return;
     }
 
-    // add new tweet to database, clear textarea & errors, reset counter
+    // add new tweet to database, start GET request, clear textarea & errors, reset counter
     $.ajax({
       url: "/tweets",
       method: "POST",

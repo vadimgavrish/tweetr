@@ -39,15 +39,15 @@ function convertDate(unix) {
 
 $(document).ready(function () {
   
+  // load exisitng tweets on page load
+  loadTweets();
+
   // slide up/down new-tweet section, focus textarea, clear error messages
   $(".composeButton").click(function(){
     $(".new-tweet").slideToggle();
     $(".new-tweet form textarea").focus();
     $("form p").text("");
   })
-
-  // load exisitng tweets on page load
-  loadTweets();
   
   // post new tweet
   let $form = $(".new-tweet form");
@@ -70,10 +70,10 @@ $(document).ready(function () {
       method: "POST",
       data: $form.serialize()
     }).done(function() {
-      loadTweets();
       $form.find("input[type=text], textarea").val("");
       $("form p").text("");
       $('.counter').text(140);
+      loadTweets();
     });
   });
   

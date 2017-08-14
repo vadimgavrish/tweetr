@@ -6,7 +6,7 @@ nav {
 
 
 #nav-bar {
-  background: linear-gradient(141deg, #00FF00 0%, #1fc8db 51%, #2cb5e8 75%);
+  background: linear-gradient(to right, limegreen, greenyellow);
   height: 80px;
   position:fixed;
   top: 0;
@@ -59,7 +59,7 @@ nav {
    border: 2px solid white;
    border-radius: 5px;
    color: white;
-   background-color: deepskyblue;
+   background-color: limegreen;
    transition: all 0.5s;
  }
 
